@@ -2,152 +2,160 @@
 
 ## 📌 Project Overview
 This project focuses on analyzing **Pizza Sales data** to understand overall sales performance, customer preferences, and business trends.  
-The analysis is carried out using **SQL for data analysis** and **Power BI for interactive dashboards and visualization**.
+The analysis is performed using **SQL for data analysis** and **Power BI for interactive dashboards and visualizations**, with a strong emphasis on **business intelligence and KPI analysis**.
 
-This project is suitable for **academic submissions, internships, business intelligence portfolios, and data analytics practice**.
+This project is suitable for **academic submissions, internships, GitHub portfolios, and business intelligence practice**.
 
 ---
 
 ## 🎯 Project Objectives
-- Analyze pizza sales performance across categories and sizes  
+- Analyze overall pizza sales performance  
 - Identify top and bottom performing pizzas  
-- Understand revenue and quantity trends  
+- Understand sales distribution by category and size  
 - Perform time-based sales analysis  
-- Build an interactive Power BI dashboard for decision-making  
+- Build an interactive Power BI dashboard  
+- Generate actionable business insights  
 
 ---
 
 ## 🗂️ Project Structure
+
 ```bash
 pizzas_analysis/
-│
+|
 ├── bi/
-│   └── Pizza Sales Dashboard.pbix
+│ └── Pizza Sales Dashboard.pbix
 │
 ├── data/
-│   └── (Raw Excel files - ignored due to size)
+│ └── (Raw Excel files - ignored due to large size)
 │
 ├── images/
-│   ├── home.PNG
-│   ├── kpi's.PNG
-│   ├── best_worst.PNG
-│   ├── hourly_trend_by_total_pizza_sold.PNG
-│   ├── sales_by_pizza_category.PNG
-│   ├── sales_by_size_chart.PNG
-│   ├── top5_pizzas_by_total_sales.PNG
-│   ├── top5_pizzas_by_total_quantity.PNG
-│   ├── bottom5_pizzas_by_revenue.PNG
-│   └── bottom5_pizzas_by_quantity.PNG
+│ ├── home.PNG
+│ ├── kpi's.PNG
+│ ├── best_worst.PNG
+│ ├── hourly_trend_by_total_pizza_sold.PNG
+│ ├── sales_by_pizza_category.PNG
+│ ├── sales_by_size_chart.PNG
+│ ├── top5_pizzas_by_total_sales.PNG
+│ ├── top5_pizzas_by_total_quantity.PNG
+│ ├── bottom5_pizzas_by_revenue.PNG
+│ └── bottom5_pizzas_by_quantity.PNG
 │
 ├── reports/
-│   ├── bi_report.pdf
-│   └── sql_report.pdf
+│ ├── bi_report.pdf
+│ └── sql_report.pdf
 │
 ├── sql_queries/
-│   ├── data_cleaning.sql
-│   ├── eda.sql
-│   ├── bi_dashboard.sql
-│   └── most_important.sql
+│ ├── data_cleaning.sql
+│ ├── eda.sql
+│ ├── bi_dashboard.sql
+│ └── most_important.sql
 │
 ├── .gitignore
 └── README.md
 ```
 
 ## 📁 Folder Description
-- **bi/**
-    Contains the Power BI dashboard file used for visualization and insights.
+- **bi/**  
+  Contains the Power BI dashboard file used for analysis and visualization.
 
-- **data/**
-    Contains raw Excel sales data files.
-    ⚠️ Large Excel datasets are excluded from GitHub due to file size limits.
+- **data/**  
+  Contains raw Excel sales datasets. Large Excel files are excluded from GitHub due to file size limitations.
 
-- **images/**
-    Dashboard screenshots and visual insights exported from Power BI.
+- **images/**  
+  Dashboard screenshots and charts exported from Power BI.
 
-- **reports/**
-    PDF reports summarizing analysis results and findings.
+- **reports/**  
+PDF reports explaining SQL analysis and Power BI insights.
 
-- **sql_queries/**
-    SQL scripts used for:
+- **sql_queries/**  
+  SQL scripts used for:
 
-Data cleaning
+    - Data cleaning
 
-Exploratory Data Analysis (EDA)
+    - Exploratory Data Analysis (EDA)
 
-KPI calculation
+    - KPI calculations
 
-Dashboard support queries
+    - Dashboard support queries
 
-🧰 Technologies Used
+## 🧰 Technologies Used
 
-SQL
+- SQL
 
-Power BI
+- Power BI
 
-Microsoft Excel
+- Microsoft Excel
 
-Data Analytics
+- Data Analytics
 
-Business Intelligence Concepts
+- Business Intelligence
 
-📊 Exploratory Data Analysis (EDA)
-🔹 Sales Performance Analysis
+## 📊 Exploratory Data Analysis (EDA)
+### 🔹 Univariate Analysis
 
-Total revenue and total quantity sold
+- Total revenue distribution
 
-Average order value and key KPIs
+- Total pizzas sold
 
-🔹 Category & Size Analysis
+- Average order value
 
-Sales by pizza category
+### 🔹 Bivariate Analysis
 
-Sales by pizza size
+- Sales by pizza category
 
-🔹 Time-Based Analysis
+- Sales by pizza size
 
-Hourly sales trends
+### 🔹 Multivariate Analysis
 
-Identification of peak sales periods
+- Hourly sales trends
 
-🔹 Product Performance
+- Product performance across time and categories
 
-Top 5 pizzas by revenue and quantity
+### 📈 Key Insights
 
-Bottom 5 pizzas by revenue and quantity
+- A small number of pizzas generate a large portion of total revenue
 
-📈 Key Insights
+- Certain pizza categories and sizes dominate sales
 
-Certain pizza categories and sizes contribute significantly to total revenue
+- Clear peak hours observed in hourly sales trends
 
-Clear hourly patterns in pizza demand
+- Underperforming pizzas identified for optimization
 
-A small number of pizzas drive most sales
+## ▶️ How to Run the Project (After Cloning)
 
-Underperforming pizzas can be identified for optimization
+Follow the steps below to explore this project on your local system after cloning it from GitHub.
+```bash
+# Step 1: Open Terminal / Git Bash
+    Open **Git Bash** (Windows) or **Terminal** (macOS/Linux)
+```
 
-▶️ How to Use the Project (After Cloning)
-# Step 1: Clone the Repository
-git clone https://github.com/MERN-Stack123/pizzas_analysis.git
+```bash
+# Step 2: Clone the Repository
+    git clone https://github.com/MERN-Stack123/pizzas_analysis.git
+```
+```bash
+# Step 3: Navigate to the Project Directory
+    cd pizzas_analysis
+```
 
-# Step 2: Navigate to the Project Directory
-cd pizzas_analysis
+```bash
+# Step 4: Open Power BI Dashboard
+    Open Power BI Desktop
+    Load bi/Pizza Sales Dashboard.pbix
+```
 
-# Step 3: Open Power BI Dashboard
-Open Power BI Desktop
-Load: bi/Pizza Sales Dashboard.pbix
+```bash
+# Step 5: Connect Dataset (Optional)
+    Place Excel files inside data/ folder
+    Refresh the dashboard
+```
 
-# Step 4: Connect Local Data (Optional)
-Place Excel data files inside the data/ folder
-Refresh the dashboard
+# 🖋️ Author Information
 
-⚠️ Dataset Information
+**Name:** Prakash Chaurasia  
+**Domain:** Data Analytics  
 
-Due to GitHub size restrictions, raw Excel dataset files are not included in this repository.
-They can be added locally for analysis and dashboard refresh.
+---
 
-🖋️ Author Information
-
-Name: Prakash Chaurasia
-Domain: Data Analytics | Business Intelligence
-
-Passionate about transforming raw business data into meaningful insights using analytics and visualization.
+> Passionate about transforming business data into actionable insights through analytics and visualization.
