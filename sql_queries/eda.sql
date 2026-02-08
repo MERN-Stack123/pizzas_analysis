@@ -88,16 +88,48 @@
 			order by pizza_category, total_sold desc;
 
 
+		/*================ daily revenue trend ============*/
+		select order_date,
+			cast(sum(total_price) as decimal(10,2)) as daily_revenue,
+			count(distinct order_id) as total_orders
+			from pizza_sales
+			group by order_date
+			order by order_date;
+
+
 		/*================ monthly revenue trend ============*/
 		select
-			datepart(month, order_date) as month,
+			datename(month, order_date) as month_name,
+			datepart(month, order_date) as month_no,
 			cast(sum(total_price) as decimal(10,2)) as revenue
-			from pizza_sales
-			group by datepart(month, order_date)
-			order by month;
+		from pizza_sales
+		group by datename(month, order_date), datepart(month, order_date)
+		order by month_no;
 
 
 		/*================ average order value ============*/
 		select
 		    cast(sum(total_price) / count(distinct order_id) as decimal(10,2)) as avg_order_value
 			from pizza_sales;
+
+
+		/*================ bottom 5 pizzas (by quantity) ============*/
+		select top 5
+			pizza_name,
+			sum(quantity) as total_sold
+		from pizza_sales
+		group by pizza_name
+		order by total_sold asc;
+
+
+		/*================ category revenue contribution (%) ============*/
+		select
+			pizza_category,
+			cast(
+				sum(total_price) * 100.0 /
+				(select sum(total_price) from pizza_sales)
+				as decimal(5,2)
+			) as revenue_percentage
+		from pizza_sales
+		group by pizza_category
+		order by revenue_percentage desc;

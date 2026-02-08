@@ -10,7 +10,8 @@
         from pizza_sales;
 
 
-/*================ revenue contirbution % ============*/
+/*================ revenue contribution % ============*/
+
     select
         pizza_name,
         round(sum(total_price), 2) as revenue,
@@ -58,3 +59,14 @@
         (select avg(total_price) from pizza_sales)
         order by order_value desc;
 
+/*================ category revenue contribution % ============*/
+    select
+        pizza_category,
+        cast(
+            sum(total_price) * 100.0 /
+            (select sum(total_price) from pizza_sales)
+            as decimal(10,2)
+        ) as revenue_pct
+    from pizza_sales
+    group by pizza_category
+    order by revenue_pct desc;
